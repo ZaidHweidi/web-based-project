@@ -1,0 +1,270 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #003135;
+  }
+  
+  header {
+    background: #003135;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  header nav ul li a:hover {
+    color: #024950;
+    text-decoration: underline;
+  }
+  
+  /* about section */
+  .about {
+    background-color:#024950;
+    color: #fff;
+    text-align: left;
+    padding: 80px 20px;
+  }
+  
+  .about h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  .about p {
+    font-size: 1.5em;
+  }
+
+   /* courses section */
+   .courses {
+    background-color:#024950;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .courses h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .courses p {
+    font-size: 1.3em;
+  }
+
+  .courses2 {
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .courses2 button {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    width: 300px;
+    height: 120px;
+    background-color: #024950;
+    color: #fff;
+    margin: 50px;
+  }
+
+  .courses2 button:hover {
+    background-color:#ff6347;
+    color: #000000;
+    box-shadow: 2px 2px;
+    cursor: pointer;
+  }
+  
+  /* contact section */
+  .contact {
+    background-color:#024950;
+    color: #fff;
+    text-align: center;
+    padding: 80px 50px;
+  }
+  
+  .contact h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+  }
+  
+  .contact p {
+    font-size: 1.5em;
+  }
+
+  /* stories section */
+  .stories {
+    background-color:#024950;
+    color: #fff;
+    text-align: center;
+    padding: 80px 50px;
+  }
+  
+  .stories h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+  }
+  
+  .stories p {
+    font-size: 1.5em;
+  }
+
+  .video-container{
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.explanation{
+  background-color: #024950;
+  color: #fff;
+}
+
+.video{
+  background-color: #024950;
+  color: #fff;
+}
+
+.video-resources{
+  background-color: #024950;
+  color: #fff;
+}
+
+.website-resources{
+  background-color: #024950;
+  color: #fff;
+}
+
+.video-resources a{
+  text-decoration: none;
+  color:#ff6347;
+  font-size: 22px;
+}
+
+.website-resources a{
+  text-decoration: none;
+  color:#ff6347;
+  font-size: 22px;
+}
+
+  /* Section Styles */
+  main section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  main section h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  main section ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  /* Contact Form */
+  form input, form textarea, form button {
+    
+    width: 50%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #495057;
+    border-radius: 40px;
+    font-size: 1.1em;
+  }
+  
+  form input:focus, form textarea:focus, form button:focus {
+    outline: none;
+    border-color: #ff6347;
+  }
+  
+  form button {
+    background: #020911;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    outline:2px solid #5a6066;
+  }
+  
+  form button:hover {
+    background: #e55337;
+  }
+
+  .navbar-nav .nav-link {
+    background-color: #323e49; /* Button-like background color */
+    color: rgb(255, 255, 255); /* Text color */
+    font-size: 16px; /* Font size */
+    border-radius: 25px; /* Rounded shape */
+    padding: 10px 20px; /* Spacing inside */
+    margin: 5px; /* Spacing between links */
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    outline: 2px solid #646b6b;
+  }
+
+  /* Hover effect */
+  .navbar-nav .nav-link:hover {
+    background-color: #495057; /* Darker shade on hover */
+    color: #f8f9fa; /* Lighter text color */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .nav-link.active {
+    color: #ffffff !important; /* Use your desired color, e.g., Tomato */
+    background-color: #27575c; /* Optional: add a background color */
+  }
+  
+ 
+  .test{
+    text-align: center;
+    background-color: #024950;
+    color: white;
+  }
+
+
+a.btn.btn-custom {
+  background-color: #020911; /* Button background color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px; /* Rounded corners */
+  font-weight: 400;
+  outline: 3px solid #e55337;
+  font-size: 20px;
+}
+
+a.btn.btn-custom:hover {
+  background-color: #e55337; /* Darker shade on hover */
+  color: white; /* Keep text white */
+}
+
+
+  
