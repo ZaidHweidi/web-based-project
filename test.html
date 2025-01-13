@@ -229,39 +229,38 @@
   </div>
 
   <script>
+  const userName = prompt("Please enter your name:");
 
-    const userName = prompt("Please enter your name:");
+  function submitTest() {
+    const form = document.getElementById('testForm');
+    const answers = form.querySelectorAll('input[type="radio"]:checked');
+    let score = 0;
 
-    function submitTest() {
-      const form = document.getElementById('testForm');
-      const answers = form.querySelectorAll('input[type="radio"]:checked');
-      let score = 0;
-
-      // Calculate score
-      answers.forEach(answer => {
-        score += parseInt(answer.value);
-      });
-
-      // Determine the user's English level
-      let level = '';
-      if (score === 10) {
-        level = 'Advanced';
-      } else if (score >= 7) {
-        level = 'Upper Intermediate';
-      } else if (score >= 5) {
-        level = 'Intermediate';
-      } else if (score >= 3) {
-        level = 'Pre-Intermediate';
-      } else {
-        level = 'Beginner';
-      }
-
-      // Show the result
-      const resultTextArea = document.getElementById('result');
-      resultTextArea.value = `Hello, ${userName}!\nYour English level is: ${level}`
-
+    // Calculate score using a for loop
+    for (let i = 0; i < answers.length; i++) {
+      score += parseInt(answers[i].value);
     }
-  </script>
+
+    // Determine the user's English level
+    let level = '';
+    if (score === 10) {
+      level = 'Advanced';
+    } else if (score >= 7) {
+      level = 'Upper Intermediate';
+    } else if (score >= 5) {
+      level = 'Intermediate';
+    } else if (score >= 3) {
+      level = 'Pre-Intermediate';
+    } else {
+      level = 'Beginner';
+    }
+
+    // Show the result
+    const resultTextArea = document.getElementById('result');
+    resultTextArea.value = `Hello, ${userName}!\nYour English level is: ${level}`;
+  }
+</script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
