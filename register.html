@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #003135;
+      color: white;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      background-color: #024950;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 50px;
+      max-width: 700px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .btn-custom {
+      background-color: #020911;
+      color: white;
+      border: 1px solid #ffffff;
+      border-radius: 25px;
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+
+    .btn-custom:hover {
+      background-color: #e55337;
+    }
+
+    
+
+    .result {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    label {
+     display: block;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      resize: none;
+      background-color: #9db4b6;
+      color: #000000;
+      border: 2px solid #495057;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Registration</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" style="background-color: #9db4b6; color: #000000;">
+        <span id="nameError" class="error"></span><br><br>
+    
+        
+      <label for="courses">Select Your Courses (2 courses = 10% discount | 3 courses = 30% discount):
+      </label>
+      <div id="courses" style="background-color: #9db4b6; color: #000000;">
+        <label>
+          <input type="checkbox" name="courses" value="1">
+          Present Perfect (100$)
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="courses" value="2">
+          Past Perfect (100$)
+        </label>
+        <br>
+        <label>
+          <input type="checkbox" name="courses" value="3">
+          Future Perfect (100$)
+        </label>
+      </div>
+
+    <button type="button" class="btn-custom" onclick="confirm()">Submit</button>
+
+    <textarea id="result" readonly></textarea>
+  </form>
+  </div>
+
+  <script>
+    function confirm() {
+  const courseCheckboxes = document.querySelectorAll("input[name='courses']:checked");
+  const name = document.getElementById("name").value;
+  const resultArea = document.getElementById("result");
+
+  
+  const courseCount = courseCheckboxes.length;
+  const pricePerCourse = 100; 
+  const totalPrice = courseCount * pricePerCourse;
+  let discount = 0;
+
+  
+  if (courseCount === 2) {
+    discount = 0.1 * totalPrice; 
+  } else if (courseCount === 3) {
+    discount = 0.3 * totalPrice; 
+  }
+
+  const finalPrice = totalPrice - discount;
+
+  
+  if (!name.trim()) {
+    resultArea.value = "Please enter your name.";
+  } else if (courseCount === 0) {
+    resultArea.value = "Please select at least one course.";
+  } else {
+    resultArea.value = `Hello, ${name}!\n` +
+      `Total courses selected: ${courseCount}\n` +
+      `Total price: $${totalPrice.toFixed(2)}\n` +
+      `Discount: $${discount.toFixed(2)}\n` +
+      `Price after discount: $${finalPrice.toFixed(2)}`;
+  }
+}
+  </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
